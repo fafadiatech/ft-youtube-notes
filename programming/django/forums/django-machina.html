@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Building Forums with Django Machina</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Building Forums with Django Machina {django-machina}
+### Sidharth Shah, Fafadia Tech
+---
+
+# Agenda
+
+1. What is Django Machina?
+1. Typical Use Cases
+1. Installation
+1. Future Scope
+
+---
+
+# What is Django Machina?
+
+
+>> Django-machina is a forum engine for Django providing a way to build community-driven websites. It offers a full-featured yet very extensible forum solution that is designed to be used inside existing Django applications.
+
+## Similar to
+
+1. [phpBB](https://www.phpbb.com/)
+1. [Disqus](https://disqus.com/)
+
+## Replacement Components
+
+There are more options on [Django Packages](https://djangopackages.org/grids/g/forums/)
+
+1. Misago
+1. Askbot
+1. Spirit
+
+---
+
+# Typical Use Cases
+
+### 1. Internal Discussions
+### 2. Building Communities
+### 3. Great communication tool
+### 4. Customer Service
+
+---
+
+# Installation
+
+Detailed [setup instructions](README.md) has step-by-step information.
+
+## Requirements
+
+1. Python 2.7 {django-machina does support Python 3}
+1. Django 1.11
+1. Indexer {Either of the} -- For Haystack
+      1. Woosh
+      1. Solr
+      1. Elastic Search
+
+
+---
+
+# Installation
+
+Detailed [setup instructions](README.md) has step-by-step information.
+
+## Overall Steps
+
+1. Install Dependencies
+1. Update following sections in `settings.py` {or `base.py`}
+      1. `INSTALLED_APPS`
+      1. `TEMPLATES`
+      1. `MIDDLEWARE`
+      1. `STATICFILES_DIRS`
+      1. `CACHES`
+1. Setting up Django Haystack, update following sections in `settings.py` {or `base.py`}
+      1. `HAYSTACK_CONNECTIONS`
+1. Run migrations `python manage.py migrate`
+1. Update `urls.py`
+
+---
+
+# Future Scope
+
+1. Production Setup
+1. Sub-Domain Mapping
+1. Control behaviour via Code
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
