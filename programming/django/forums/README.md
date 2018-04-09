@@ -35,6 +35,7 @@ There is [related presentation](django-machina.html) which is used during the pr
         - Add following to Middleware
             - `'machina.apps.forum_permission.middleware.ForumPermissionMiddleware',`
     1. `STATICFILES_DIRS`
+        - `from machina import MACHINA_MAIN_STATIC_DIR`
         - This might not have been created by default add following section
         ```python
         STATICFILES_DIRS = (
